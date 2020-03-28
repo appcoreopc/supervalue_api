@@ -18,7 +18,7 @@ namespace SuperValueAPI.Controllers
 
         private readonly ILogger<AuthenticationController> _logger;
 
-        public WeatherForecastController(ILogger<AuthenticationController> logger)
+        public AuthenticationController(ILogger<AuthenticationController> logger)
         {
             _logger = logger;
         }

@@ -16,9 +16,9 @@ namespace SuperValueAPI.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<PaymentIntegratonWebHookController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public PaymentIntegratonWebHookController(ILogger<PaymentIntegratonWebHookController> logger)
         {
             _logger = logger;
         }
