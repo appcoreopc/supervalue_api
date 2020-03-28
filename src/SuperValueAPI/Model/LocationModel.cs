@@ -41,7 +41,7 @@ namespace SuperValueAPI.Controllers
     {
         public IEnumerable<ProductInfo> ProductInfo { get; set;  }
 
-        public decimal Amount { get; set; }
+        public long? Amount { get; set; }
 
         public string CustomerId { get; set; }
 
