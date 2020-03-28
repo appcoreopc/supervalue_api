@@ -12,6 +12,5 @@ namespace SuperValueAPI.Controllers
 
         public float DistanceAway { get; set; }
     }
-    
 
 }
