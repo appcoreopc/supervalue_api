@@ -8,11 +8,6 @@ namespace SuperValueAPI.Controllers
     [Route("[controller]")]
     public class UserRegistrationController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         private readonly ILogger<UserRegistrationController> _logger;
 
         public UserRegistrationController(ILogger<UserRegistrationController> logger)

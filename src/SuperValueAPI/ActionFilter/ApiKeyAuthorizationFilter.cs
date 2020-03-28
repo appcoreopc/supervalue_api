@@ -1,5 +1,6 @@
 
 using System;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace SuperValueAPI.ActionFilter
@@ -8,7 +9,9 @@ namespace SuperValueAPI.ActionFilter
     {
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-          System.Console.WriteLine(context.HttpContext.Request.Headers["Authorization"]);
+          var authorizationHeader = context.HttpContext.Request.Headers["Authorization"];
+          if (String.IsNullOrWhiteSpace(authorizationHeader))
+              context.Result = new UnauthorizedResult();
         }
     }
 }
