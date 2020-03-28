@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SuperValueAPI.ActionFilter;
 
 namespace SuperValueAPI.Controllers
 {
@@ -24,16 +25,11 @@ namespace SuperValueAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetOrderHistory(UserOrderQueryModel model)
-        {
-           return Ok();
-        }
+        [ApiKeyAuthorization]
+        public IActionResult GetOrderHistory(UserOrderQueryModel model) => Ok();
 
 
-        [HttpGet]
-        public IActionResult GetCurrentOrder(UserOrderQueryModel mode)
-        {
-          return Ok();
-        }
+        //[HttpGet]
+        //public IActionResult GetCurrentOrder(UserOrderQueryModel mode) => Ok();
     }
 }
