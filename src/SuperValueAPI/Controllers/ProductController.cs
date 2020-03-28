@@ -1,17 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace SuperValueAPI.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
     public class ProductController : ControllerBase
     {
-    
         private readonly ILogger<ProductController> _logger;
 
         public ProductController(ILogger<ProductController> logger)
@@ -20,9 +13,16 @@ namespace SuperValueAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Index()
         {
             return Ok();
+        }
+
+
+        [HttpGet]
+        public IActionResult GetProduct(int i)
+        {
+            return Ok($"Product {i}");
         }
     }
 }

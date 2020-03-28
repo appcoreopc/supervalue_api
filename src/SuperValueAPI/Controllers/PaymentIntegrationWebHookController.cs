@@ -3,8 +3,6 @@ using Microsoft.Extensions.Logging;
 
 namespace SuperValueAPI.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
     public class PaymentIntegratonWebHookController : ControllerBase
     {
         private readonly ILogger<PaymentIntegratonWebHookController> _logger;
@@ -13,7 +11,5 @@ namespace SuperValueAPI.Controllers
         {
             _logger = logger;
         }
-
-     
     }
 }

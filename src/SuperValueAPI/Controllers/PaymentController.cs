@@ -5,8 +5,6 @@ using Stripe;
 
 namespace SuperValueAPI.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
     public class PaymentController : ControllerBase
     {
         private readonly ILogger<PaymentController> _logger;

@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace SuperValueAPI.Controllers
-{
-    [ApiController]
-    [Route("[controller]")]
+{  
     public class UserRegistrationController : ControllerBase
     {
         private readonly ILogger<UserRegistrationController> _logger;
@@ -17,6 +15,13 @@ namespace SuperValueAPI.Controllers
 
         [HttpPost]
         public IActionResult RegisterUser(UserRegistrationModel user) 
+        {
+            return Ok();
+        }
+
+
+        [HttpGet]
+        public IActionResult GetUser() 
         {
             return Ok();
         }

@@ -7,8 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace SuperValueAPI.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
+    
     public class AuthenticationController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -26,8 +25,7 @@ namespace SuperValueAPI.Controllers
         [HttpGet]
         public IActionResult AuthenticateUser(UserModel model)
         {
-
-           return Ok();
+           return Ok("authenticated");
         }
     }
 }

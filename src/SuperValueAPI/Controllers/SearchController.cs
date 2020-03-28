@@ -4,8 +4,6 @@ using Microsoft.Extensions.Logging;
 
 namespace SuperValueAPI.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
     public class SearchController : ControllerBase
     { 
         private readonly ILogger<SearchController> _logger;
@@ -21,6 +19,7 @@ namespace SuperValueAPI.Controllers
             return Ok(new List<LocationShopResult>());
         }
 
+        [HttpGet]
         public IActionResult SearchByProduct(ProductQueryModel location)
         {
             return Ok(new List<LocationShopResult>());
