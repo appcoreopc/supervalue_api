@@ -10,4 +10,9 @@
     <PackageReference Include="Stripe.net" Version="35.10.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SuperValue.Utilities\SuperValue.Utilities.csproj" />
+    <ProjectReference Include="..\SuperValue.DataProvider\SuperValue.DataProvider.csproj" />
+  </ItemGroup>
+
 </Project>
