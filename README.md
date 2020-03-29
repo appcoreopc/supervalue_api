@@ -5,9 +5,12 @@
 
 This is written on .netcore 2.1
 
-When you want to deploy -
+When you want to deploy, run the following command once, 
 
 * git remote add azure https://supervalueappservice.scm.azurewebsites.net:443/supervalueappservice.git*
+
+
+Then to push and deploy, do this when you're ready,
 
 * git push azure *
 
