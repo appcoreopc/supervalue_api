@@ -33,15 +33,10 @@ namespace SuperValueAPI
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-
-            //app.UseMvc();
+            //app.UseHttpsRedirection();
 
             app.UseMvcWithDefaultRoute();
-            // app.UseMvc(routes =>
-            // {
-            // routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            // });
+        
          }
     }
 }

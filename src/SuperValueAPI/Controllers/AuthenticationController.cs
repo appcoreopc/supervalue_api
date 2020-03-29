@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SuperValueAPI.ActionFilter;
 
 namespace SuperValueAPI.Controllers
 {
@@ -23,6 +24,8 @@ namespace SuperValueAPI.Controllers
         }
 
         [HttpGet]
+        [ApiKeyAuthorization]
+
         public IActionResult AuthenticateUser(UserModel model)
         {
            return Ok("authenticated");

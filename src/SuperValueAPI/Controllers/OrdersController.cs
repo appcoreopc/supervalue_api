@@ -8,8 +8,6 @@ using SuperValueAPI.ActionFilter;
 
 namespace SuperValueAPI.Controllers
 {
-    //[ApiController]
-    //[Route("[controller]/[actions]/[id]")]
     public class OrdersController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -25,11 +23,12 @@ namespace SuperValueAPI.Controllers
         }
 
         [HttpGet]
-        //[ApiKeyAuthorization]
+        [ApiKeyAuthorization]
         public IActionResult GetOrderHistory(UserOrderQueryModel model) => Ok();
 
 
         [HttpGet]
+        [ApiKeyAuthorization]
         public IActionResult GetCurrentOrder(UserOrderQueryModel mode) => Ok();
 
       
